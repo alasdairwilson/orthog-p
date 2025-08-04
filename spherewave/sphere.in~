@@ -1,0 +1,48 @@
+&datin
+lt=200       mt=200      nt=2400   mu=0.2d0  nprint=40 s=1.0d0 r=1.0d0 dr=8.d-1
+p0=0.d-1     q0=0.d-1    m0=.0d0     n0=.0d0  g0=1.0d-1     h0=1.0d-1    d0= 0.d0 e0=0.d0
+kx=6.d0     al=1.d0  be=1.d0   gm=1.0d-5     fr=2.0d0 
+m1=0      m2=201    noff=200   decx=30.0d0 dect=0.0d0 ncentre = 50
+gdense = 1.d20 pdense = 1.d20 temp = 9004.6 tstep=1.0d-3 ionise = 1 frac = 1.0d-2 emin= 1.0d-7
+/
+
+
+Below: sample data showing sound wave altered by coupling to plasma: take r=s=0.5,1.5 to show contrast
+p0=0.d0     q0=0.d0    m0=0.d0     g0=0.1d0     h0=.10d0    d0=0.0d0
+kx=1.0d0     al=0.10d0  be=0.10d0   ga=.1d0     fr=1.4d0
+l1=1        l2=200    noff=2     decx=0.1d-4   dect=0.0d0
+
+
+lt,mt,nt,mu,nprint,s,p0,q0,m0,n0,kx,g0,h0,d0,e0,
+     & al,be,gm,fr,m1,m2,noff, decx,dect,r,dr,ncentre,gdense,pdense
+     & ,temp,tstep,ionise,frac,emin
+
+
+lt=200       mt=90      nt=320     mu=0.2d0  nprint=9 s=0.550d0 r=1.0d0
+p0=0.d0     q0=0.d0    m0=0.d0     g0=0.0d0     h0=0.0d0    d0=0.10d0
+kx=6.0d0     al=0.10d0  be=0.10d0   ga=1.d0     fr=6.4d0
+l1=80        l2=119    noff=100     decx=0.15d0   dect=0.1d0 
+
+
+
+* Var directory
+*   pp   array   Wx (plasma x vel)
+*   qq   array   Wz (plasma z vel)
+*   mm   array   bx (mag field x)
+*   nn   array   bz (mag field z)
+*   gg   array   vx (gas x vel)
+*   hh   array   vz (gas z vel)
+*   dd   array   rho (gas density)
+*   ee   array   plasma density
+*   mu  real    mesh ratio = dt/dr
+*   r   real    (plasma sound speed)/(alfven speed)
+*   s   real    (gas speed)/(alfven speed)
+*   al  real    coupling constant
+*   be  real    coupling constant
+*   ga  real    coupling constant
+*   nt  int     total number of timesteps
+*   lt  int     total no of x-increments
+*   mt  int     total no of z-increments
+*   l   int     index for x-dirn 
+*   m   int     index for z-dirn (mag field dirn)
+*   n   int     index for t stepping
